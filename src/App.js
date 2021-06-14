@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Chart from './Chart';
+import BitcoinChart from './BitcoinChart';
 
 const App = () => {
 
@@ -18,9 +18,9 @@ const App = () => {
   }, [])
 
   return (
-    <div>
+    <div style={{ backgroundColor: "lightcyan", minHeight: "100vh" }}>
       <h2 style={{ textAlign: "center" }}>30 Day Bitcoin Price Chart</h2>
-      <Chart data={data} />
+      <BitcoinChart data={data} />
     </div>
   );
 }

@@ -65,7 +65,7 @@ class Chart extends React.Component {
     const styles = {
       container: {
         display: "grid",
-        justifyItems: "center"
+        justifyItems: "center",
       }
     };
 
