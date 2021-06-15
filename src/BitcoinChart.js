@@ -1,8 +1,8 @@
 import React from "react";
 import * as d3 from "d3";
 
-const width = 650;
-const height = 400;
+const width = 950;
+const height = 450;
 const margin = {
   top: 20,
   right: 5,
@@ -42,6 +42,7 @@ class Chart extends React.Component {
       .line()
       .x(d => xScale(d.date))
       .y(d => yScale(d.price));
+      
     const minY = d3.min(data, d => d.price);
 
     const area = d3
@@ -76,8 +77,8 @@ class Chart extends React.Component {
       <svg width={width} height={height}>
         <path id={"line"} d={line(data)} stroke="#6788ad" fill="transparent" />
         <path id={"area"} d={area(data)} fill="#6788ad" style={{ opacity: 0.2 }} />
-        <text transform={`translate(${width / 2 - margin.left -margin.right}, ${height - 10})`}>Dates for the Last {this.props.filter} Days</text>
-        <text transform={`translate(15, ${(height - margin.bottom) /1.5}) rotate(270)`}>Amount in USD</text>
+        <text transform={`translate(${width / 2 - margin.left - margin.right }, ${height - 10})`}>Dates for the Last {this.props.filter} Days</text>
+        <text transform={`translate(15, ${(height - margin.bottom) / 1.5}) rotate(270)`}>Amount in USD ($)</text>
         <g ref="xAxis" transform={`translate(0, ${height - margin.bottom})`} />
         <g ref="yAxis" transform={`translate(${margin.left}, 0)`} />
       </svg>

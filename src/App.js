@@ -25,7 +25,7 @@ const App = () => {
   }
 
   return (
-    <div style={{ textAlign: "center", backgroundColor: "lightcyan", minHeight: "100vh", minWidth: "100vw" }}>
+    <div style={{ textAlign: "center" }}>
       <h2 style={{ textAlign: "center" }}>Interactive BitCoin Price Chart</h2>
       <BitcoinChart filter={filter} data={data} />
       <br />
